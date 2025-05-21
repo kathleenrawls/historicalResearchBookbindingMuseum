@@ -25,27 +25,27 @@ manager.onError = function ( url ) {
     // TEXTURES
     
     const loader = new THREE.TextureLoader(manager);
-    const texture1 = loader.load('./resources/white_marble.jpg');
+    const texture1 = loader.load('/historicalResearchBookbindingMuseum/resources/white_marble.jpg');
     texture1.wrapS = THREE.RepeatWrapping;
     texture1.wrapT = THREE.RepeatWrapping;
     texture1.repeat.set(40,40)
     
-    const texture2 = loader.load('./resources/ceiling_tiles.jpg');
+    const texture2 = loader.load('/historicalResearchBookbindingMuseum/resources/ceiling_tiles.jpg');
     texture2.wrapS = THREE.RepeatWrapping;
     texture2.wrapT = THREE.RepeatWrapping;
     texture2.repeat.set(16,16)
     
-    const paintTex = loader.load('./resources/wall_paint.jpg');
+    const paintTex = loader.load('/historicalResearchBookbindingMuseum/resources/wall_paint.jpg');
     paintTex.wrapS = THREE.RepeatWrapping;
     paintTex.wrapT = THREE.RepeatWrapping;
     paintTex.repeat.set(7,7)
     
-    const stoneTex = loader.load('./resources/flat_stone.jpg');
+    const stoneTex = loader.load('/historicalResearchBookbindingMuseum/resources/flat_stone.jpg');
     stoneTex.wrapS = THREE.RepeatWrapping;
     stoneTex.wrapT = THREE.RepeatWrapping;
     stoneTex.repeat.set(2,2)
     
-    const canvasTex = loader.load('./resources/canvas.jpg');
+    const canvasTex = loader.load('/historicalResearchBookbindingMuseum/resources/canvas.jpg');
     canvasTex.wrapS = THREE.RepeatWrapping;
     canvasTex.wrapT = THREE.RepeatWrapping;
     canvasTex.repeat.set(1,1)
@@ -290,7 +290,7 @@ manager.onError = function ( url ) {
     // MODELS
     
     const logoGeo = new THREE.PlaneGeometry(5,5)
-    const logoTex = loader.load('./resources/bookbinding_def.png', () => {},() => {console.log('loading progressing')},() =>{console.log('loading error')});
+    const logoTex = loader.load('/historicalResearchBookbindingMuseum/resources/bookbinding_def.png', () => {},() => {console.log('loading progressing')},() =>{console.log('loading error')});
     const logoMat = new THREE.MeshStandardMaterial({color: 0x000000})
     logoMat.map = logoTex
     logoMat.transparent = true
@@ -341,7 +341,7 @@ manager.onError = function ( url ) {
     
     function addArtifact(id, size, xPos, yPos, zPos, yRot) {
         var a101Geo = new THREE.PlaneGeometry(size,size)
-        const a101Tex = loader.load('./2DArt/' + id + '.png', () =>
+        const a101Tex = loader.load('/historicalResearchBookbindingMuseum/2DArt/' + id + '.png', () =>
         {a101Tex.needsUpdate = true;a101.scale.set(1.0,(a101Tex.image.height/a101Tex.image.width),1.0);}, () => {console.log('loading progressing')}, () => {console.log('loading error')});
         const a101Mat = new THREE.MeshPhysicalMaterial({color: 0x666666, clearcoat: 1, clearcoatRoughness: 0, roughness: 0})
         a101Mat.map = a101Tex
@@ -388,7 +388,7 @@ manager.onError = function ( url ) {
     for (let i in wallsList) {
         let wallID = wallsList[i]
         const wallInfoGeo = new THREE.PlaneGeometry(6, 11)
-        const wallInfoTex = loader.load('./Walls/' + wallID + '.png')
+        const wallInfoTex = loader.load('/historicalResearchBookbindingMuseum/Walls/' + wallID + '.png')
         const wallInfoMat = new THREE.MeshPhysicalMaterial({color: 0x000000})
         wallInfoMat.map = wallInfoTex
         wallInfoMat.transparent = true
@@ -401,7 +401,7 @@ manager.onError = function ( url ) {
     }
     
     const creditsGeo = new THREE.PlaneGeometry(6, 11)
-    const creditsTex = loader.load("./resources/museumCredits.png")
+    const creditsTex = loader.load("/historicalResearchBookbindingMuseum/resources/museumCredits.png")
     const creditsMat = new THREE.MeshPhysicalMaterial({color: 0x000000})
     creditsMat.map = creditsTex
     creditsMat.transparent = true
@@ -410,7 +410,7 @@ manager.onError = function ( url ) {
     creditsMesh.rotation.y = -Math.PI
     scene.add(creditsMesh)
     
-    const mapTex = loader.load("./resources/museumMap.png")
+    const mapTex = loader.load("/historicalResearchBookbindingMuseum/resources/museumMap.png")
     const mapMat = new THREE.MeshPhysicalMaterial({color: 0x000000})
     mapMat.map = mapTex
     mapMat.transparent = true
