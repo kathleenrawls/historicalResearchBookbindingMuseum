@@ -26,7 +26,7 @@ window.onresize = function () {
 
 const pmremGenerator = new THREE.PMREMGenerator( renderer );
 const hdriLoader = new THREE.TextureLoader()
-hdriLoader.load( '/resources/indoor_hdri.jpg', function ( texture ) {
+hdriLoader.load( '/historicalResearchBookbindingMuseum/resources/indoor_hdri.jpg', function ( texture ) {
   const envMap = pmremGenerator.fromEquirectangular( texture ).texture;
   texture.dispose(); 
   scene.environment = envMap
