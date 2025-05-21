@@ -95,7 +95,7 @@ document.onclick = function(e) {
     if (intersects.length > 0 && e.target.id != "startMenu" && e.target.id != "closeBtn1" && e.target.id != "closeBtn2") {
         if (intersects[0].object.name.indexOf("ARTIFACT") == 0) {
             let code = intersects[0].object.name.substring(9)
-            document.getElementById("artifactDisplay").children[1].src = "/2DArt/" + code + ".png"
+            document.getElementById("artifactDisplay").children[1].src = "/historicalResearchBookbindingMuseum/2DArt/" + code + ".png"
             document.getElementById("artifactDisplay").style.display = "block"
             cClass.makeControls().unlock()
         } else if (intersects[0].object.name.indexOf("LABEL") == 0) {
