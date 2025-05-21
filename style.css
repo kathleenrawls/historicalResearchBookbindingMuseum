@@ -31,7 +31,7 @@ html, body {
     width: 50%;
     aspect-ratio: 1.5;
     background-color: #ffffff;
-    background-image: url("/resources/start_screen.png");
+    background-image: url("/historicalResearchBookbindingMuseum/resources/start_screen.png");
     background-size: cover;
     background-position: center;
     display: flex;
