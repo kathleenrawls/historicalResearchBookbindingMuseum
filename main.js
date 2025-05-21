@@ -1,11 +1,10 @@
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.119.1/build/three.module.js'
 import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.119.1/examples/jsm/loaders/GLTFLoader.js';
 import { RGBELoader } from 'https://cdn.jsdelivr.net/npm/three@0.119.1/examples/jsm/loaders/RGBELoader.js';
-import {createWorld} from './world.js'
-import {controlClassComp, controlClassMob} from './controls.js'
-import {checkRay} from './objectCollisions.js'
-import {inventory} from './inventory.js'
-import {labels} from './labels.js'
+import {createWorld} from '/historicalResearchBookbindingMuseum/world.js'
+import {controlClassComp, controlClassMob} from '/historicalResearchBookbindingMuseum/controls.js'
+import {checkRay} from '/historicalResearchBookbindingMuseum/objectCollisions.js'
+import {labels} from '/historicalResearchBookbindingMuseum/labels.js'
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xD6E6EE);
@@ -84,10 +83,6 @@ document.getElementById("closeBtn2").onclick = function (e) {
     e.target.parentNode.style.display = "none"
     cClass.makeControls().lock()
 }
-
-// INVENTORY
-// const startInventory = [["Instructions", "/2DArt/logo.png", "NONE", "openBook"]]
-// let inv = new inventory(startInventory, cClass)
 
 let mouseRaycaster = new THREE.Raycaster()
     let mouse = new THREE.Vector2()
